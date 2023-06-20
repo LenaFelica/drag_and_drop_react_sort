@@ -55,6 +55,7 @@ function App() {
     <div className="app">
         {cardList.sort(sortCards).map(card => 
          <div 
+            draggable={true}
             className={'card'} key={card.id}
             onDragStart={(e) => dragStartHandler(e, card)}
             onDragLeave={(e) => dragLeaveHandler(e)}
